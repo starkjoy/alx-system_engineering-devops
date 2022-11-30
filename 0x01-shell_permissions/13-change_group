@@ -1,0 +1,2 @@
+#!/bin/bash \n
+chgrp school /tmp/h/hello \n

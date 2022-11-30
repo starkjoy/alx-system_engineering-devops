@@ -1,0 +1,3 @@
+#!/bin/bash \n
+chown vincent /tmp/h \n
+chgrp staff /tmp/h \n

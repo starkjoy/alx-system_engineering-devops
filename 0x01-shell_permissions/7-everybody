@@ -1,0 +1,2 @@
+#!/bin/bash \n
+chmod 111 /tmp/h/hello \n
