@@ -1,0 +1,2 @@
+#!/bin/bash \n
+ln /tmp/sym/_ls_ \n
