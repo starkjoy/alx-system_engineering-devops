@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./tmp/h -type d | chmod +x
+find  -type d | chmod u+x,g+x,o+x
