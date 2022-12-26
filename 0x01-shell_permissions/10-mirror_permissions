@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod --reference =/tmp/h/olleh /tmp/h/hello
+chmod --reference =olleh hello
