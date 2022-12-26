@@ -1,2 +1,2 @@
-#!/bin/bash \n
-find ./tmp/h -type d | chmod +x \n
+#!/bin/bash
+find ./tmp/h -type d | chmod +x
