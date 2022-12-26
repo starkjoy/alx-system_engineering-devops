@@ -1,2 +1,2 @@
-#!/bin/bash \n
-cat /etc/groups \n
+#!/bin/bash
+cat /etc/groups
