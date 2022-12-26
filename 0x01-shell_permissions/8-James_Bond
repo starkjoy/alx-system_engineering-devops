@@ -1,2 +1,2 @@
-#!/bin/bash \n
-chmod 007 /tmp/h/hello \n
+#!/bin/bash
+chmod 007 /tmp/h/hello
