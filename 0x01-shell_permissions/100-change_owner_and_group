@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -exec chown vincent {} + -type d -exec chgrp staff {} +
+find . -type f -exec chown vincent {} + -type d -exec chown vincent {} + -type f -exec chgrp staff {} + -type d -exec chgrp staff {} +
