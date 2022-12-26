@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f | xargs chown vincent | find . -type d | xargs chgrp staff
+find . -exec chown vincent {} \; -exec chgrp staff {} \;
