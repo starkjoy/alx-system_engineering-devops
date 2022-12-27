@@ -1,2 +1,2 @@
-#!/bin/bash \n
-ln /tmp/sym/_ls_ \n
+#!/bin/bash
+ln /tmp/sym/_ls_

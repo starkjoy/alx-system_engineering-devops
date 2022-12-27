@@ -1,2 +1,2 @@
-#!/bin/bash \n
-cp -n ./tmp/*.html ./ \n
+#!/bin/bash
+cp -n ./tmp/*.html ./

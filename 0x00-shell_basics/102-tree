@@ -1,2 +1,2 @@
-#!/bin/bash \n
-mkdir /tmp/h/welcome/ /tmp/h/welcome/to/ /tmp/h/welcome/to/school \n
+#!/bin/bash
+mkdir /tmp/h/welcome/ /tmp/h/welcome/to/ /tmp/h/welcome/to/school
