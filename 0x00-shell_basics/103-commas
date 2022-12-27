@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -AmpX --group-directories-first .* | sort -f -t/ -k1,1 | tr '\n' ',' | sed 's/,$/\n/'
+ls -xamp
