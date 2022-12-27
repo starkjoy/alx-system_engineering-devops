@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ampXv1
+ls -AmpX --group-directories-first | grep -v '/$' | sed 's/^/.\//' | sort -f -t/ -t -k1,1 | tr '\n' ',' | sed 's/,$/\n/'
