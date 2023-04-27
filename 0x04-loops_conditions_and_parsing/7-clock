@@ -1,23 +1,24 @@
 #!/usr/bin/env bash
-minute=0
-hour=0
-while (($hour < 14))
+#Printts 12 hours times 59 minutes
+MINUTE=0
+HOUR=0
+while [ $HOUR -lt 14 ]
 do
-	while (($minute < 60))
+	while [ $MINUTE -lt 60 ]
 	do
-		if (($minute == 0)); then
-			echo "Hour: $hour"
-			((hour++))
+		if [ $MINUTE -eq 0 ]; then
+			echo "Hour: $HOUR"
+			((HOUR=HOUR+1))
 		fi
-		if (($hour != 14)); then
-			echo "$minute"
+		if [ $HOUR -ne 14 ]; then
+			echo "$MINUTE"
 		fi
-		((minute++))
-		if (($minute == 60)); then
-			if (($hour == 13)); then
+		((MINUTE=MINUTE+1))
+		if [ $MINUTE -eq 60 ]; then
+			if [ $HOUR -eq 13 ]; then
 				break
 			else
-				((minute=0))
+				((MINUTE=0))
 			fi
 		fi
 	done
