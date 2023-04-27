@@ -1,20 +1,16 @@
 #!/usr/bin/env bash
 #Prints some test for different number conditions
 NUM=1
-while [ $NUM < 21 ]
+while [ $NUM -lt 21 ]
 do
+	echo $NUM
 	case $NUM in
 		4)
-			echo "$NUM"
 			echo "bad luck from China";;
 		9)
-			echo "$NUM"
 			echo "bad luck from Japan";;
 		17)
-			echo "$NUM"
 			echo "bad luck from Italy";;
-		*)
-			echo "$NUM"
 	esac
 	((NUM=NUM+1))
 done
