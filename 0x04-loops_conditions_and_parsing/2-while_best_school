@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Prints Best School 10 times
 num=0
-while (($num < 10));
+while [ $num < 10 ];
 do
 	echo "Best School"
 	((num++))
