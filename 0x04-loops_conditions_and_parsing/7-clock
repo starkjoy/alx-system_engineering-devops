@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Printts 12 hours times 59 minutes
-MINUTE=0
+MINUTE=1
 HOUR=0
 while [ $HOUR -lt 14 ]
 do
