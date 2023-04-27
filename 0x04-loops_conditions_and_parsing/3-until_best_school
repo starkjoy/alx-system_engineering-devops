@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+num=0
+until (($num == 10))
+do
+	echo "Best School"
+	((num++))
+done
