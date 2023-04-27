@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-num=0
-while (($num < 10))
+#Prints bad luck, good luck and Best School
+NUM=0
+while [ $NUM -lt 10 ]
 do
-	if (($num == 3)); then
+	if [ $NUM -eq 3 ]; then
 		echo "bad luck"
-	elif (($num == 7)); then
+	elif [ $NUM -eq 7 ]; then
 		echo "good luck"
 	else
 		echo "Best School"
 	fi
-	((num++))
+	((NUM=NUM+1))
 done
