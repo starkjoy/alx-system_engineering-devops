@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-num=0
-until (($num == 10))
+#Prints best school 10 times
+NUM=0
+until [ $NUM -eq 10 ]
 do
 	echo "Best School"
-	((num++))
+	((NUM=NUM+1))
 done
