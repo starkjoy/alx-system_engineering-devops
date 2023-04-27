@@ -6,7 +6,7 @@ while [ $HOUR -lt 14 ]
 do
 	while [ $MINUTE -lt 60 ]
 	do
-		if [ $MINUTE -eq 0 ]; then
+		if [ $MINUTE -eq 1 ]; then
 			echo "Hour: $HOUR"
 			((HOUR=HOUR+1))
 		fi
@@ -18,7 +18,7 @@ do
 			if [ $HOUR -eq 13 ]; then
 				break
 			else
-				((MINUTE=0))
+				((MINUTE=1))
 			fi
 		fi
 	done
