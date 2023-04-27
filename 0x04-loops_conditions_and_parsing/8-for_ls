@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Displays content of current directory in a list form
+for file in *; do
+	if [[ ! "$file" =~ ^\. ]] && [[ $file == *-* ]]; then
+		file_name=$(echo "$file" | cut -d'-' -f2-)
+		echo "- $file_name"
+	fi
+done
