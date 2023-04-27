@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Prints Hi and Best School
 NUM=0
 while [ $NUM -lt 10 ]
 do
