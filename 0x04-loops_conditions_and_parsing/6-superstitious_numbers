@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
-num=1
-while (($num < 21))
+#Prints some test for different number conditions
+NUM=1
+while [ $NUM < 21 ]
 do
-	case $num in
+	case $NUM in
 		4)
-			echo "$num"
+			echo "$NUM"
 			echo "bad luck from China";;
 		9)
-			echo "$num"
+			echo "$NUM"
 			echo "bad luck from Japan";;
 		17)
-			echo "$num"
+			echo "$NUM"
 			echo "bad luck from Italy";;
 		*)
-			echo "$num"
+			echo "$NUM"
 	esac
-	((num++))
+	((NUM=NUM+1))
 done
