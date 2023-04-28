@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays 'To infinity and beyond' indefinitely and 'I am invincible' upon SIGTERM
+trap "echo I am invincible!!!" SIGTERM
+COUNT=0
+while [ $COUNT -lt 10 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
