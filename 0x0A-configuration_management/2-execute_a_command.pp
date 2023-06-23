@@ -1,6 +1,5 @@
 # This script creates a manifest that kills a process named 'Killmenow'
 
-exec { 'kill-command':
-  command => 'pkill killmenow'
-  onlyif => 'pgrep killmenow'
+exec { 'pkill -f killmenow':
+  path => '/usr/bin/:/usr/local/bin/:/bin/'
 }
