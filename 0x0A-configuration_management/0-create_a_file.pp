@@ -1,4 +1,5 @@
-file { '/tmp/school':
+#Creates a file
+file { 'File':
 	path	=> '/tmp/school',
 	mode	=> '0744',
 	owner	=> 'www-data',
