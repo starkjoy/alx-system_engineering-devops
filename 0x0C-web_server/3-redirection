@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
-
 # Install nginx
-apt-get update
-apt-get install -y nginx
+sudo apt -y update
+sudo apt -y install nginx
+sudo service nginx start
 
-# Configure nginx to listen on port 80
-echo "server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    index index.html;
-    location /redirect_me {
-        return 301 http://cuberule.com/;
-    }
-}" > /etc/nginx/sites-available/default
+#update configuration file
+sudo bash -c 'cat > /etc/nginx/sites-available/default <<EOF
+server {
+	listen 80;
+	server_name localhost;
 
-# Create the default index.html file
-echo "Hello World" > /var/www/html/index.html
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+	}
 
-# Restart nginx
-service nginx restart
+	location / {
+		root /var/www/html;
+		index index.html index.htm;
+	}
+}
+EOF'
+sudo service nginx restart
