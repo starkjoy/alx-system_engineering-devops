@@ -1,37 +1,39 @@
-# Define the Nginx class
-class nginx {
-# Install the Nginx package
-  package { 'nginx':
-    ensure => installed,
-  }
-  
-# Ensure the Nginx service is running and enabled
-  service { 'nginx':
-    ensure => running,
-    enable => true,
-    require => Package['nginx'],
-  }
-  
- # Define the Nginx configuration file
-  file { '/etc/nginx/sites-available/default':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    content => template('nginx/default.erb'),
-    require => Package['nginx'],
-    notify  => Service['nginx'],
-  }
-
-# Define the index.html file
-  file { '/var/www/html/index.html':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    content => 'Hello World!',
-    require => Package['nginx'],
-    notify  => Service['nginx'],
-  }
+package { 'nginx':
+  ensure => installed,
 }
 
-# Apply the Nginx class
-include nginx
+service { 'nginx':
+  ensure  => running,
+  enable  => true,
+  require => Package['nginx'],
+}
+
+file { '/var/www/html/index.html':
+  ensure  => file,
+  content => 'Hello World!',
+  require => Package['nginx'],
+}
+
+file { '/etc/nginx/sites-available/default':
+  ensure  => file,
+  content => '
+    server {
+      listen 80;
+      server_name localhost;
+
+      location / {
+        root   /var/www/html;
+        index  index.html;
+      }
+
+      location /redirect_me {
+        return 301 http://example.com/newpage;
+      }
+    }
+  ',
+  require => Package['nginx'],
+}
+
+service { 'nginx':
+  subscribe => File['/etc/nginx/sites-available/default'],
+}
