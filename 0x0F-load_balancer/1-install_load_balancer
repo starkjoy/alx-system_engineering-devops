@@ -33,8 +33,8 @@ frontend load-balancer
 backend webservers
     mode http
     balance roundrobin
-    server web-01 [STUDENT_ID]-web-01:80 check
-    server web-02 [STUDENT_ID]-web-02:80 check
+    server web-01 194693-web-01:80 check
+    server web-02 194693-web-02:80 check
 EOF'
 
 # Enable HAProxy service
@@ -42,4 +42,3 @@ sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 
 # Restart HAProxy service
 sudo service haproxy restart
-
