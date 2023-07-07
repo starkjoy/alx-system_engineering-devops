@@ -28,7 +28,6 @@ server {
 	}
 }
 EOF'
-
-sudo bash -c "echo 'Ceci n\'est pas une page' | sudo tee /var/www/html/404.html"
+sudo bash -c echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 sudo service nginx restart
 
